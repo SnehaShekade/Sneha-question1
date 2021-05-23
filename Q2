@@ -1,0 +1,46 @@
+def passwordstring(input_string):
+    n = int(input("Enter the password: "))
+    n = len(input_string)
+    hasLower = False
+    hasUpper = False
+    hasDigit = False
+    specialChar = False
+    normalChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+     
+    for i in range(n):
+        if input_string[i].islower():
+            hasLower = True
+        if input_string[i].isupper():
+            hasUpper = True
+        if input_string[i].isdigit():
+            hasDigit = True
+        if input_string[i] not in normalChars:
+            specialChar = True
+   
+    print("Strength of password:-", end = "")
+    if (hasLower and hasUpper and
+        hasDigit and specialChar and n >= 8):
+        print("Strong")
+         
+    else ((hasLower or hasUpper) and
+          specialChar and n >= 6):
+        print("Weak")
+    
+        
+    def Count(str):
+    upper, lower, digit, special = 0, 0, 0, 0
+    for i in range(len(str)):
+        if str[i].isupper():
+            upper += 1
+        elif str[i].islower():
+            lower += 1
+        elif str[i].isdigit():
+            number += 1
+        else:
+            special += 1
+    print("Password contains \n ")
+    print('Special characters:', special)
+    print('Uppercase Alphabet:', upper)
+    print('Lowercase Alphabet:', lower)
+    print('Digit:', Digit)
+   
