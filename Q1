@@ -1,0 +1,43 @@
+import sys
+n = int(input()) 
+arr = [] 
+for _ in range(n): 
+    arr.append(int(input())
+    
+def maxLength(arr):
+ 
+    lenn = -sys.maxsize - 1
+    N = len(arr)
+ 
+    for i in range(N):
+        l = len(arr[i])
+
+        if (lenn < l):
+            lenn = l
+    return lenn
+
+def maxStrings(arr, lenn):
+ 
+    N = len(arr)
+    ans = []
+
+    for i in range(N):
+        if (lenn == len(arr[i])):
+            ans.append(arr[i])
+
+    for i in range(len(ans)):
+        print(ans[i], end = " ")
+
+def printStrings(arr):
+
+    max = maxLength(arr)
+
+    maxStrings(arr, max)
+    
+   print arr()
+   
+   
+   
+
+ 
+    
